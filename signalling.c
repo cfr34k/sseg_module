@@ -20,10 +20,10 @@
 size_t nseg = 5;
 
 // GPIOs
-const int GPIO_DATA   = 9;
-const int GPIO_CLOCK  = 8;
-const int GPIO_STROBE = 6;
-const int GPIO_OE     = 4;
+const int GPIO_DATA   = 32 * (int)('G' - 'A') + 0; // linux 3.4: 9; // PG00
+const int GPIO_CLOCK  = 32 * (int)('G' - 'A') + 2; // linux 3.4: 8; // PG02
+const int GPIO_STROBE = 32 * (int)('G' - 'A') + 4; // linux 3.4: 6; // PG04
+const int GPIO_OE     = 32 * (int)('G' - 'A') + 6; // linux 3.4: 4; // PG06
 
 #define NCHARS 47
 const unsigned char PATTERNS[NCHARS] = {
